@@ -1,0 +1,86 @@
+{
+  "templates": [
+    {
+      "name": "support-page",
+      "urls": [
+        "https://www.zimmerbiomet.com/en/support.html"
+      ],
+      "description": "Support page with customer service resources, contact information, and help documentation",
+      "blocks": [
+        {
+          "name": "cards-cta",
+          "instances": [
+            "#container-745bc00595",
+            "#container-63c85c0129",
+            "#container-3329b4f645",
+            "#container-707c1f120a",
+            "#container-7d9288bcec"
+          ]
+        }
+      ],
+      "sections": [
+        {
+          "id": "section-1",
+          "name": "Page Title & Introduction",
+          "selector": "main .cmp-container > .container:first-child",
+          "style": null,
+          "blocks": [],
+          "defaultContent": [
+            "h1.heading--h1",
+            "#text-1361268311 p"
+          ]
+        },
+        {
+          "id": "section-2",
+          "name": "Support Cards Row 1",
+          "selector": "#container-745bc00595",
+          "style": null,
+          "blocks": [
+            "cards-cta"
+          ],
+          "defaultContent": []
+        },
+        {
+          "id": "section-3",
+          "name": "Support Cards Row 2",
+          "selector": "#container-63c85c0129",
+          "style": null,
+          "blocks": [
+            "cards-cta"
+          ],
+          "defaultContent": []
+        },
+        {
+          "id": "section-4",
+          "name": "Support Cards Row 3",
+          "selector": "#container-3329b4f645",
+          "style": null,
+          "blocks": [
+            "cards-cta"
+          ],
+          "defaultContent": []
+        },
+        {
+          "id": "section-5",
+          "name": "Support Cards Row 4",
+          "selector": "#container-707c1f120a",
+          "style": "light-grey",
+          "blocks": [
+            "cards-cta"
+          ],
+          "defaultContent": []
+        },
+        {
+          "id": "section-6",
+          "name": "Support Cards Row 5",
+          "selector": "#container-7d9288bcec",
+          "style": null,
+          "blocks": [
+            "cards-cta"
+          ],
+          "defaultContent": []
+        }
+      ]
+    }
+  ]
+}

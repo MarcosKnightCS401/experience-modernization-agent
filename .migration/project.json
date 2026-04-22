@@ -1,0 +1,9 @@
+{
+  "type": "xwalk",
+  "libraryUrl": "https://main--sta-xwalk-boilerplate--aemysites.aem.page/tools/sidekick/library.json",
+  "contentHostUrl": "author-p92368-e968987.adobeaemcloud.com",
+  "aemSitePath": "/content/experience-modernization-agent",
+  "aemAssetsFolderPath": "/content/dam/experience-modernization-agent",
+  "aemSiteName": "experience-modernization-agent",
+  "aemSiteTitle": "experience-modernization-agent"
+}

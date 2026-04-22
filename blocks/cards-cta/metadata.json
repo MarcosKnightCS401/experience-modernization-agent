@@ -1,0 +1,39 @@
+{
+  "variantName": "cards-cta",
+  "baseBlock": "cards",
+  "version": "1.0.0",
+  "created": "2026-04-07T19:03:00.000Z",
+  "sourceContext": {
+    "originUrl": "https://www.zimmerbiomet.com/en/support.html",
+    "originPage": "Support & Services page",
+    "blockPosition": "middle"
+  },
+  "visualCharacteristics": {
+    "colorScheme": "light",
+    "density": "minimal",
+    "purpose": "cta-navigation",
+    "imagePattern": "noimg"
+  },
+  "contentPattern": {
+    "structure": "title + CTA link",
+    "buttonCount": 1,
+    "imageCount": 0
+  },
+  "reuseGuidance": {
+    "suitableFor": [
+      "support/resource listing pages",
+      "navigation hub pages with topic links",
+      "index pages with CTA cards"
+    ],
+    "notSuitableFor": [
+      "product cards with images",
+      "blog article cards with descriptions",
+      "team member cards with photos"
+    ]
+  },
+  "usage": {
+    "pagesUsing": ["/content/en/support"],
+    "reuseCount": 1,
+    "lastUsed": "2026-04-07T19:03:00.000Z"
+  }
+}

@@ -19,6 +19,12 @@
     ]
   },
   {
+    "id": "cards-cta",
+    "components": [
+      "card"
+    ]
+  },
+  {
     "id": "cards",
     "components": [
       "card"
