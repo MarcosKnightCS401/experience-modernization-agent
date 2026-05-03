@@ -57,7 +57,7 @@ function focusNavSection() {
  * @param {Boolean} expanded Whether the element should be expanded or collapsed
  */
 function toggleAllNavSections(sections, expanded = false) {
-  sections.querySelectorAll('.nav-sections .default-content-wrapper > ul > li').forEach((section) => {
+  sections.querySelectorAll('.nav-drop').forEach((section) => {
     section.setAttribute('aria-expanded', expanded);
   });
 }
@@ -119,10 +119,11 @@ export default async function decorate(block) {
   nav.id = 'nav';
   while (fragment.firstElementChild) nav.append(fragment.firstElementChild);
 
+  // Find section divs (skip meta, script, link elements from head.html injection)
+  const sections = [...nav.children].filter((child) => child.classList && child.classList.contains('section'));
   const classes = ['brand', 'sections', 'tools'];
   classes.forEach((c, i) => {
-    const section = nav.children[i];
-    if (section) section.classList.add(`nav-${c}`);
+    if (sections[i]) sections[i].classList.add(`nav-${c}`);
   });
 
   const navBrand = nav.querySelector('.nav-brand');
@@ -132,18 +133,28 @@ export default async function decorate(block) {
     brandLink.closest('.button-container').className = '';
   }
 
+  // Strip button classes from all nav links
+  nav.querySelectorAll('.button').forEach((btn) => {
+    btn.className = '';
+    const container = btn.closest('.button-container');
+    if (container) container.className = '';
+  });
+
   const navSections = nav.querySelector('.nav-sections');
   if (navSections) {
-    navSections.querySelectorAll(':scope .default-content-wrapper > ul > li').forEach((navSection) => {
-      if (navSection.querySelector('ul')) navSection.classList.add('nav-drop');
-      navSection.addEventListener('click', () => {
-        if (isDesktop.matches) {
-          const expanded = navSection.getAttribute('aria-expanded') === 'true';
-          toggleAllNavSections(navSections);
-          navSection.setAttribute('aria-expanded', expanded ? 'false' : 'true');
-        }
+    const navList = navSections.querySelector('ul');
+    if (navList) {
+      [...navList.children].forEach((navSection) => {
+        if (navSection.querySelector('ul')) navSection.classList.add('nav-drop');
+        navSection.addEventListener('click', () => {
+          if (isDesktop.matches) {
+            const expanded = navSection.getAttribute('aria-expanded') === 'true';
+            toggleAllNavSections(navSections);
+            navSection.setAttribute('aria-expanded', expanded ? 'false' : 'true');
+          }
+        });
       });
-    });
+    }
   }
 
   // hamburger for mobile

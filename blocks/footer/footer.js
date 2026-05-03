@@ -16,5 +16,12 @@ export default async function decorate(block) {
   const footer = document.createElement('div');
   while (fragment.firstElementChild) footer.append(fragment.firstElementChild);
 
+  // Strip button classes from footer links
+  footer.querySelectorAll('.button').forEach((btn) => {
+    btn.className = '';
+    const container = btn.closest('.button-container');
+    if (container) container.className = '';
+  });
+
   block.append(footer);
 }

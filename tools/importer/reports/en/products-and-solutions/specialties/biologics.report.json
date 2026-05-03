@@ -1,0 +1,12 @@
+{
+  "status": "success",
+  "url": "https://www.zimmerbiomet.com/en/products-and-solutions/specialties/biologics.html",
+  "path": "en/products-and-solutions/specialties/biologics",
+  "timestamp": "2026-04-24T17:13:05.302Z",
+  "title": "Advanced Biologics Solutions | Zimmer Biomet",
+  "template": "specialty-landing-page",
+  "blocks": [
+    "hero-product",
+    "hero-product"
+  ]
+}

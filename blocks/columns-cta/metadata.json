@@ -1,0 +1,31 @@
+{
+  "variantName": "columns-cta",
+  "baseBlock": "columns",
+  "version": "1.0.0",
+  "created": "2026-04-24T16:55:00.000Z",
+  "sourceContext": {
+    "originUrl": "https://www.zimmerbiomet.com/en/products-and-solutions/specialties/orthogrid.html",
+    "originPage": "OrthoGrid specialty landing page",
+    "blockPosition": "bottom"
+  },
+  "visualCharacteristics": {
+    "colorScheme": "dark",
+    "density": "spacious",
+    "purpose": "cta-columns",
+    "imagePattern": "noimg"
+  },
+  "contentPattern": {
+    "structure": "heading + text + CTA button per column",
+    "buttonCount": 2,
+    "imageCount": 0
+  },
+  "reuseGuidance": {
+    "suitableFor": ["CTA sections with two options", "support/demo dual CTAs"],
+    "notSuitableFor": ["image-heavy columns", "more than 2 columns"]
+  },
+  "usage": {
+    "pagesUsing": ["/content/en/products-and-solutions/specialties/orthogrid"],
+    "reuseCount": 1,
+    "lastUsed": "2026-04-24T16:55:00.000Z"
+  }
+}

@@ -81,6 +81,86 @@
           "defaultContent": []
         }
       ]
+    },
+    {
+      "name": "specialty-landing-page",
+      "urls": [
+        "https://www.zimmerbiomet.com/en/products-and-solutions/specialties/orthogrid.html"
+      ],
+      "description": "Specialty product landing page with hero, content sections, product cards, and CTA columns",
+      "blocks": [
+        {
+          "name": "hero-product",
+          "instances": [
+            ".hero-jump-links"
+          ]
+        },
+        {
+          "name": "cards-cta",
+          "instances": [
+            "#container-b203b9c61f"
+          ]
+        },
+        {
+          "name": "columns-cta",
+          "instances": [
+            "#container-e9dd4bdb75"
+          ]
+        }
+      ],
+      "sections": [
+        {
+          "id": "section-1",
+          "name": "Hero",
+          "selector": ".hero-jump-links",
+          "style": "dark",
+          "blocks": [
+            "hero-product"
+          ],
+          "defaultContent": []
+        },
+        {
+          "id": "section-2",
+          "name": "Content - Digital Revolution",
+          "selector": "#01-Robotics",
+          "style": null,
+          "blocks": [],
+          "defaultContent": [
+            "#01-Robotics h2",
+            "#text-c6bd20be2b"
+          ]
+        },
+        {
+          "id": "section-3",
+          "name": "Product Cards",
+          "selector": "#container-b203b9c61f",
+          "style": null,
+          "blocks": [
+            "cards-cta"
+          ],
+          "defaultContent": [
+            "#container-b203b9c61f > .title h3"
+          ]
+        },
+        {
+          "id": "section-4",
+          "name": "CTA Columns",
+          "selector": "#container-e9dd4bdb75",
+          "style": "dark",
+          "blocks": [
+            "columns-cta"
+          ],
+          "defaultContent": []
+        },
+        {
+          "id": "section-5",
+          "name": "References",
+          "selector": ".expand",
+          "style": null,
+          "blocks": [],
+          "defaultContent": []
+        }
+      ]
     }
   ]
 }

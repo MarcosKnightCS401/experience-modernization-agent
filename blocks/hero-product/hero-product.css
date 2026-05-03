@@ -1,0 +1,51 @@
+.hero-product-container .hero-product-wrapper {
+  max-width: unset;
+  padding: 0;
+}
+
+.hero-product {
+  position: relative;
+  padding: 48px 24px;
+  min-height: 300px;
+  background-color: var(--dark-color);
+}
+
+.hero-product > div {
+  max-width: var(--container-max-width);
+  margin: 0 auto;
+}
+
+.hero-product h1 {
+  color: var(--heading-color);
+  font-size: 45px;
+  font-weight: 700;
+  margin-bottom: 16px;
+}
+
+.hero-product p {
+  color: var(--heading-color);
+  font-size: 21px;
+  font-weight: 300;
+  line-height: 1.5;
+  max-width: 600px;
+}
+
+.hero-product picture {
+  position: absolute;
+  z-index: 0;
+  inset: 0;
+  object-fit: cover;
+  box-sizing: border-box;
+}
+
+.hero-product img {
+  object-fit: cover;
+  width: 100%;
+  height: 100%;
+}
+
+@media (width >= 900px) {
+  .hero-product {
+    padding: 64px 32px;
+  }
+}

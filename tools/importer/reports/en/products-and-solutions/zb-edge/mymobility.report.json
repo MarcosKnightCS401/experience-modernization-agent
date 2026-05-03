@@ -1,0 +1,12 @@
+{
+  "status": "success",
+  "url": "https://www.zimmerbiomet.com/en/products-and-solutions/zb-edge/mymobility.html",
+  "path": "en/products-and-solutions/zb-edge/mymobility",
+  "timestamp": "2026-04-24T19:59:07.272Z",
+  "title": "mymobility | Zimmer Biomet",
+  "template": "product-detail-page",
+  "blocks": [
+    "hero-product",
+    "hero-product"
+  ]
+}

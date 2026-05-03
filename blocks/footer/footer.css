@@ -1,20 +1,51 @@
 footer {
-  background-color: var(--light-color);
+  background-color: var(--dark-color);
+  color: #fff;
   font-size: var(--body-font-size-xs);
 }
 
-footer .footer > div {
+footer .footer > div > div {
   margin: auto;
   max-width: 1200px;
-  padding: 40px 24px 24px;
+  padding: 32px 24px;
+}
+
+footer .footer > div > div:first-child {
+  border-bottom: 1px solid rgb(255 255 255 / 20%);
 }
 
 footer .footer p {
-  margin: 0;
+  margin: 0 0 8px;
+  color: rgb(255 255 255 / 70%);
+}
+
+footer .footer a:any-link {
+  color: #fff;
+  text-decoration: none;
+}
+
+footer .footer a:hover {
+  text-decoration: underline;
+}
+
+footer .footer ul {
+  list-style: none;
+  padding: 0;
+  margin: 16px 0;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 12px 24px;
+}
+
+footer .footer > div > div:first-child p {
+  font-size: var(--body-font-size-m);
+  font-weight: 700;
+  color: #fff;
+  margin-bottom: 16px;
 }
 
 @media (width >= 900px) {
-  footer .footer > div {
-    padding: 40px 32px 24px;
+  footer .footer > div > div {
+    padding: 32px;
   }
 }

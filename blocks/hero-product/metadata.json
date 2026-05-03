@@ -1,0 +1,31 @@
+{
+  "variantName": "hero-product",
+  "baseBlock": "hero",
+  "version": "1.0.0",
+  "created": "2026-04-24T16:55:00.000Z",
+  "sourceContext": {
+    "originUrl": "https://www.zimmerbiomet.com/en/products-and-solutions/specialties/orthogrid.html",
+    "originPage": "OrthoGrid specialty landing page",
+    "blockPosition": "top"
+  },
+  "visualCharacteristics": {
+    "colorScheme": "dark",
+    "density": "spacious",
+    "purpose": "product-hero",
+    "imagePattern": "large"
+  },
+  "contentPattern": {
+    "structure": "image + heading + subtitle",
+    "buttonCount": 0,
+    "imageCount": 1
+  },
+  "reuseGuidance": {
+    "suitableFor": ["product landing pages", "specialty pages with hero image"],
+    "notSuitableFor": ["text-only heroes", "heroes with CTAs"]
+  },
+  "usage": {
+    "pagesUsing": ["/content/en/products-and-solutions/specialties/orthogrid"],
+    "reuseCount": 1,
+    "lastUsed": "2026-04-24T16:55:00.000Z"
+  }
+}
