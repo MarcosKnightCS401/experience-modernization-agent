@@ -1,3 +1,4 @@
+/* eslint-disable */
 var CustomImportScript = (() => {
   var __defProp = Object.defineProperty;
   var __defProps = Object.defineProperties;
@@ -151,65 +152,61 @@ var CustomImportScript = (() => {
   }
 
   // tools/importer/transformers/zimmerbiomet-cleanup.js
-  var H = { before: "beforeTransform", after: "afterTransform" };
+  var TransformHook = { beforeTransform: "beforeTransform", afterTransform: "afterTransform" };
   function transform(hookName, element, payload) {
-    if (hookName === H.before) {
+    if (hookName === TransformHook.beforeTransform) {
       WebImporter.DOMUtils.remove(element, [
         "#onetrust-consent-sdk",
+        "#ot-sdk-btn-floating",
         ".onetrust-pc-dark-filter",
-        // Experience fragments (header, footer, legal disclaimer)
-        ".cmp-experiencefragment--header",
-        ".cmp-experiencefragment--footer",
-        // Keep .cmp-experiencefragment--product-pages-legal-disclaimer (authorable content)
-        // Global headers (desktop + mobile)
-        "header.global-header-v2",
-        ".global-header-v2",
-        ".global-header--mobile",
-        ".global-header--desktop",
-        // Navigation elements (all types)
-        "nav.navigation",
-        "nav.navigation--mobile",
-        "nav.navigation--primary",
-        "nav.navigation--utility",
-        // Mega menu content inside navigation
-        ".navigation__mega-menu",
-        ".large--border",
-        // Sticky container (header chrome)
-        ".sticky-container"
+        "[data-acsb-hidden]",
+        "[data-acsb-force-hidden]",
+        ".acsb-trigger",
+        "#acsb-widget"
       ]);
     }
-    if (hookName === H.after) {
+    if (hookName === TransformHook.afterTransform) {
       WebImporter.DOMUtils.remove(element, [
+        ".cmp-experiencefragment--header",
+        ".cmp-experiencefragment--footer",
+        "header.global-header-v2",
         "footer.global-footer",
-        "div.global-footer",
-        ".global-footer--utility",
-        ".global-footer--primary-container",
-        ".global-footer--info-section",
-        "nav.educationEventsLinks",
-        "nav.news-room",
-        "nav.education-events",
+        ".mobile-menu",
+        ".navigation__mega-menu",
+        ".find-a-doctor__cta",
         "iframe",
         "link",
         "noscript"
       ]);
+      const allParagraphs = element.querySelectorAll("p");
+      allParagraphs.forEach((p) => {
+        if (p.textContent.includes("screen-reader mode") || p.textContent.includes("accessibe.com")) {
+          p.remove();
+        }
+      });
+      const imgs = element.querySelectorAll("img");
+      imgs.forEach((img) => {
+        const src = img.getAttribute("src") || "";
+        if (src.includes("bat.bing.com") || src.includes("facebook.com/tr") || src.includes("doubleclick.net") || src.includes("liadm.com") || src.includes("sharethis.com")) {
+          const picture = img.closest("picture");
+          const container = picture ? picture.closest("p") || picture : img.closest("p") || img;
+          container.remove();
+        }
+      });
     }
   }
 
   // tools/importer/transformers/zimmerbiomet-sections.js
-  var H2 = { after: "afterTransform" };
+  var TransformHook2 = { beforeTransform: "beforeTransform", afterTransform: "afterTransform" };
   function transform2(hookName, element, payload) {
-    if (hookName === H2.after) {
+    if (hookName === TransformHook2.afterTransform) {
       const { template } = payload;
       if (!template || !template.sections || template.sections.length < 2) return;
-      const { document } = element.ownerDocument ? { document: element.ownerDocument } : { document: element.getRootNode() };
-      const sections = [...template.sections].reverse();
-      sections.forEach((section) => {
-        const selectors = Array.isArray(section.selector) ? section.selector : [section.selector];
-        let sectionEl = null;
-        for (const sel of selectors) {
-          sectionEl = element.querySelector(sel);
-          if (sectionEl) break;
-        }
+      const document = element.ownerDocument;
+      const sections = template.sections;
+      const reversedSections = [...sections].reverse();
+      reversedSections.forEach((section) => {
+        const sectionEl = element.querySelector(section.selector);
         if (!sectionEl) return;
         if (section.style) {
           const sectionMetadata = WebImporter.Blocks.createBlock(document, {
@@ -218,7 +215,7 @@ var CustomImportScript = (() => {
           });
           sectionEl.after(sectionMetadata);
         }
-        if (section.id !== template.sections[0].id) {
+        if (section.id !== sections[0].id) {
           const hr = document.createElement("hr");
           sectionEl.before(hr);
         }

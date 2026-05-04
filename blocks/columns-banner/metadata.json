@@ -1,0 +1,8 @@
+{
+  "variantName": "columns-banner",
+  "baseBlock": "columns",
+  "description": "Side-by-side banner panels with background images, headings, text, and CTA buttons",
+  "createdFrom": "https://www.zimmerbiomet.com/en",
+  "createdAt": "2026-05-03",
+  "usedOn": ["https://www.zimmerbiomet.com/en"]
+}

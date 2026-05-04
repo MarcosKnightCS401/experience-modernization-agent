@@ -1,0 +1,85 @@
+.columns-banner-container .columns-banner-wrapper {
+  max-width: unset;
+  padding: 0;
+}
+
+.columns-banner > div {
+  display: flex;
+  flex-direction: column;
+}
+
+.columns-banner > div > div {
+  position: relative;
+  padding: 48px 32px;
+  min-height: 280px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  color: #fff;
+  overflow: hidden;
+}
+
+.columns-banner > div > div::before {
+  content: '';
+  position: absolute;
+  inset: 0;
+  background-color: rgb(28 17 55 / 60%);
+  z-index: 1;
+}
+
+.columns-banner > div > div picture {
+  position: absolute;
+  inset: 0;
+  z-index: 0;
+}
+
+.columns-banner > div > div picture img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.columns-banner > div > div > *:not(picture) {
+  position: relative;
+  z-index: 2;
+}
+
+.columns-banner h2 {
+  color: #fff;
+  font-size: var(--heading-font-size-xl);
+  font-weight: 700;
+  margin-bottom: 16px;
+}
+
+.columns-banner p {
+  color: rgb(255 255 255 / 85%);
+  margin-bottom: 24px;
+  font-size: var(--body-font-size-s);
+  line-height: 1.5;
+}
+
+.columns-banner .button-container a {
+  background-color: transparent;
+  color: #fff;
+  border: 2px solid #fff;
+  padding: 10px 24px;
+  font-weight: 600;
+  transition: var(--button-transition);
+}
+
+.columns-banner .button-container a:hover {
+  background-color: #fff;
+  color: var(--dark-color);
+}
+
+@media (width >= 900px) {
+  .columns-banner > div {
+    flex-direction: row;
+  }
+
+  .columns-banner > div > div {
+    flex: 1;
+    padding: 64px 48px;
+    min-height: 350px;
+  }
+}

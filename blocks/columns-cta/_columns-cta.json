@@ -16,27 +16,7 @@
       }
     }
   ],
-  "models": [
-    {
-      "id": "columns-cta",
-      "fields": [
-        {
-          "component": "text",
-          "valueType": "number",
-          "name": "columns",
-          "value": "",
-          "label": "Columns"
-        },
-        {
-          "component": "text",
-          "valueType": "number",
-          "name": "rows",
-          "value": "",
-          "label": "Rows"
-        }
-      ]
-    }
-  ],
+  "models": [],
   "filters": [
     {
       "id": "columns-cta",

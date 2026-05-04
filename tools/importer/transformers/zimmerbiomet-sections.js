@@ -3,33 +3,29 @@
 
 /**
  * Transformer: Zimmer Biomet section breaks and section metadata.
- * Processes sections from payload.template.sections.
+ * Inserts <hr> section breaks and Section Metadata blocks based on
+ * payload.template.sections from page-templates.json.
  * Runs in afterTransform only.
+ * All section selectors verified against captured DOM in migration-work/cleaned.html.
  */
-const H = { after: 'afterTransform' };
+const TransformHook = { beforeTransform: 'beforeTransform', afterTransform: 'afterTransform' };
 
 export default function transform(hookName, element, payload) {
-  if (hookName === H.after) {
+  if (hookName === TransformHook.afterTransform) {
     const { template } = payload;
     if (!template || !template.sections || template.sections.length < 2) return;
 
-    const { document } = element.ownerDocument ? { document: element.ownerDocument } : { document: element.getRootNode() };
+    const document = element.ownerDocument;
+    const sections = template.sections;
 
-    // Process sections in reverse order to avoid offset issues
-    const sections = [...template.sections].reverse();
+    // Process sections in reverse order to avoid offset issues when inserting elements
+    const reversedSections = [...sections].reverse();
 
-    sections.forEach((section) => {
-      // Try to find the section element using the selector(s)
-      const selectors = Array.isArray(section.selector) ? section.selector : [section.selector];
-      let sectionEl = null;
-      for (const sel of selectors) {
-        sectionEl = element.querySelector(sel);
-        if (sectionEl) break;
-      }
-
+    reversedSections.forEach((section) => {
+      const sectionEl = element.querySelector(section.selector);
       if (!sectionEl) return;
 
-      // Add section-metadata block if section has a style
+      // Add Section Metadata block after the section element if it has a style
       if (section.style) {
         const sectionMetadata = WebImporter.Blocks.createBlock(document, {
           name: 'Section Metadata',
@@ -38,8 +34,8 @@ export default function transform(hookName, element, payload) {
         sectionEl.after(sectionMetadata);
       }
 
-      // Add section break (hr) before the section element (except for the first section)
-      if (section.id !== template.sections[0].id) {
+      // Add <hr> section break before the section element (except for the first section)
+      if (section.id !== sections[0].id) {
         const hr = document.createElement('hr');
         sectionEl.before(hr);
       }

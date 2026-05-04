@@ -1,0 +1,12 @@
+{
+  "status": "success",
+  "url": "https://www.zimmerbiomet.com/en/products-and-solutions/specialties/foot-and-ankle.html",
+  "path": "en/products-and-solutions/specialties/foot-and-ankle",
+  "timestamp": "2026-05-03T19:57:22.747Z",
+  "title": "Foot & Ankle Solutions | Zimmer Biomet",
+  "template": "specialty-landing-page",
+  "blocks": [
+    "hero-product",
+    "hero-product"
+  ]
+}

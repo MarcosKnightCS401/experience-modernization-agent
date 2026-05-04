@@ -1,0 +1,12 @@
+{
+  "status": "success",
+  "url": "https://www.zimmerbiomet.com/en/products-and-solutions/specialties/surgical.html",
+  "path": "en/products-and-solutions/specialties/surgical",
+  "timestamp": "2026-05-03T19:58:09.954Z",
+  "title": "Surgical Solutions from Zimmer Biomet",
+  "template": "specialty-landing-page",
+  "blocks": [
+    "hero-product",
+    "hero-product"
+  ]
+}

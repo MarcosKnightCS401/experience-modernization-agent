@@ -1,0 +1,8 @@
+{
+  "variantName": "carousel",
+  "baseBlock": "carousel",
+  "description": "Horizontal scrolling carousel of product cards with images and titles",
+  "createdFrom": "https://www.zimmerbiomet.com/en",
+  "createdAt": "2026-05-03",
+  "usedOn": ["https://www.zimmerbiomet.com/en"]
+}

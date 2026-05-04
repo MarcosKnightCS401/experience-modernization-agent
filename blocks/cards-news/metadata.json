@@ -1,0 +1,8 @@
+{
+  "variantName": "cards-news",
+  "baseBlock": "cards",
+  "description": "News article cards with image, category tag, headline, and read more link",
+  "createdFrom": "https://www.zimmerbiomet.com/en",
+  "createdAt": "2026-05-03",
+  "usedOn": ["https://www.zimmerbiomet.com/en"]
+}

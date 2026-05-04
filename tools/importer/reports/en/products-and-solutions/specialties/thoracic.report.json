@@ -1,0 +1,12 @@
+{
+  "status": "success",
+  "url": "https://www.zimmerbiomet.com/en/products-and-solutions/specialties/thoracic.html",
+  "path": "en/products-and-solutions/specialties/thoracic",
+  "timestamp": "2026-05-03T19:58:26.530Z",
+  "title": "Thoracic Products | Zimmer Biomet",
+  "template": "specialty-landing-page",
+  "blocks": [
+    "hero-product",
+    "hero-product"
+  ]
+}

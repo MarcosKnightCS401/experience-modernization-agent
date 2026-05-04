@@ -1,0 +1,8 @@
+{
+  "variantName": "cards-icon",
+  "baseBlock": "cards",
+  "description": "Icon grid cards with small circular images and text links below",
+  "createdFrom": "https://www.zimmerbiomet.com/en",
+  "createdAt": "2026-05-03",
+  "usedOn": ["https://www.zimmerbiomet.com/en"]
+}

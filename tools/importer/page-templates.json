@@ -1,5 +1,142 @@
 {
+  "metadata": {
+    "projectType": "xwalk"
+  },
   "templates": [
+    {
+      "name": "homepage",
+      "urls": [
+        "https://www.zimmerbiomet.com/en"
+      ],
+      "description": "Main homepage with hero banner, featured content sections, news highlights, and global navigation entry points",
+      "blocks": [
+        {
+          "name": "hero-video",
+          "instances": [
+            ".video-hero-banner"
+          ]
+        },
+        {
+          "name": "columns",
+          "instances": [
+            "#container-378407a0e6"
+          ]
+        },
+        {
+          "name": "carousel",
+          "instances": [
+            ".generic-carousel"
+          ]
+        },
+        {
+          "name": "cards-icon",
+          "instances": [
+            "#container-cc502a8965"
+          ]
+        },
+        {
+          "name": "columns-cta",
+          "instances": [
+            "#container-f74e7c38ab"
+          ]
+        },
+        {
+          "name": "cards-news",
+          "instances": [
+            "#container-38830d0ee9"
+          ]
+        },
+        {
+          "name": "columns-banner",
+          "instances": [
+            "#container-46b580d3ab"
+          ]
+        }
+      ],
+      "sections": [
+        {
+          "id": "section-1",
+          "name": "Video Hero Banner",
+          "selector": ".video-hero-banner",
+          "style": "dark",
+          "blocks": [
+            "hero-video"
+          ],
+          "defaultContent": []
+        },
+        {
+          "id": "section-2",
+          "name": "Moving You Forward",
+          "selector": "#container-89092a7ea4",
+          "style": "light-grey",
+          "blocks": [
+            "columns"
+          ],
+          "defaultContent": [
+            "#container-89092a7ea4 h2",
+            "#container-89092a7ea4 h4",
+            "#container-89092a7ea4 h3"
+          ]
+        },
+        {
+          "id": "section-3",
+          "name": "Featured Products Carousel",
+          "selector": "#container-a4a9cc71fc",
+          "style": null,
+          "blocks": [
+            "carousel"
+          ],
+          "defaultContent": [
+            "#container-a4a9cc71fc h3"
+          ]
+        },
+        {
+          "id": "section-4",
+          "name": "Areas by Specialty",
+          "selector": "#container-f8628a2a1f",
+          "style": "light-grey",
+          "blocks": [
+            "cards-icon"
+          ],
+          "defaultContent": [
+            "#container-5430df6d37 h3",
+            "#text-302e7fa406"
+          ]
+        },
+        {
+          "id": "section-5",
+          "name": "Education CTA",
+          "selector": "#container-f74e7c38ab",
+          "style": "dark-blue-gradient",
+          "blocks": [
+            "columns-cta"
+          ],
+          "defaultContent": []
+        },
+        {
+          "id": "section-6",
+          "name": "In the News",
+          "selector": "#container-756e21fce7",
+          "style": null,
+          "blocks": [
+            "cards-news"
+          ],
+          "defaultContent": [
+            "#container-756e21fce7 h3"
+          ]
+        },
+        {
+          "id": "section-7",
+          "name": "Investor Relations & Careers",
+          "selector": "#container-46b580d3ab",
+          "style": "dark",
+          "blocks": [
+            "columns-banner"
+          ],
+          "defaultContent": []
+        }
+      ]
+    },
     {
       "name": "support-page",
       "urls": [
@@ -85,7 +222,23 @@
     {
       "name": "specialty-landing-page",
       "urls": [
-        "https://www.zimmerbiomet.com/en/products-and-solutions/specialties/orthogrid.html"
+        "https://www.zimmerbiomet.com/en/products-and-solutions/specialties/orthogrid.html",
+        "https://www.zimmerbiomet.com/en/products-and-solutions/specialties/hip.html",
+        "https://www.zimmerbiomet.com/en/products-and-solutions/specialties/knee.html",
+        "https://www.zimmerbiomet.com/en/products-and-solutions/specialties/shoulder.html",
+        "https://www.zimmerbiomet.com/en/products-and-solutions/specialties/sports-medicine.html",
+        "https://www.zimmerbiomet.com/en/products-and-solutions/specialties/trauma.html",
+        "https://www.zimmerbiomet.com/en/products-and-solutions/specialties/foot-and-ankle.html",
+        "https://www.zimmerbiomet.com/en/products-and-solutions/specialties/biologics.html",
+        "https://www.zimmerbiomet.com/en/products-and-solutions/specialties/cement.html",
+        "https://www.zimmerbiomet.com/en/products-and-solutions/specialties/cmf.html",
+        "https://www.zimmerbiomet.com/en/products-and-solutions/specialties/infection-solutions.html",
+        "https://www.zimmerbiomet.com/en/products-and-solutions/specialties/limb-salvage.html",
+        "https://www.zimmerbiomet.com/en/products-and-solutions/specialties/surgical.html",
+        "https://www.zimmerbiomet.com/en/products-and-solutions/specialties/diagnostics.html",
+        "https://www.zimmerbiomet.com/en/products-and-solutions/specialties/thoracic.html",
+        "https://www.zimmerbiomet.com/en/products-and-solutions/specialties/elbow.html",
+        "https://www.zimmerbiomet.com/en/products-and-solutions/specialties/patient-matched-implants.html"
       ],
       "description": "Specialty product landing page with hero, content sections, product cards, and CTA columns",
       "blocks": [
@@ -161,6 +314,78 @@
           "defaultContent": []
         }
       ]
+    },
+    {
+      "name": "product-detail-page",
+      "urls": [
+        "https://www.zimmerbiomet.com/en/products-and-solutions/specialties/hip/hammr-automated-hip-impaction-system.html",
+        "https://www.zimmerbiomet.com/en/products-and-solutions/specialties/hip/z1-femoral-hip-system.html",
+        "https://www.zimmerbiomet.com/en/products-and-solutions/specialties/hip/g7-acetabular-system.html",
+        "https://www.zimmerbiomet.com/en/products-and-solutions/specialties/hip/taperloc-complete-hip-system.html",
+        "https://www.zimmerbiomet.com/en/products-and-solutions/specialties/knee/persona-iq.html",
+        "https://www.zimmerbiomet.com/en/products-and-solutions/specialties/knee/rosa--knee-system.html",
+        "https://www.zimmerbiomet.com/en/products-and-solutions/specialties/knee/persona-knee-system.html",
+        "https://www.zimmerbiomet.com/en/products-and-solutions/specialties/knee/oxford-cementless.html",
+        "https://www.zimmerbiomet.com/en/products-and-solutions/specialties/shoulder/sidus-stem-free-shoulder.html",
+        "https://www.zimmerbiomet.com/en/products-and-solutions/specialties/shoulder/comprehensive-reverse-shoulder-system.html",
+        "https://www.zimmerbiomet.com/en/products-and-solutions/specialties/sports-medicine/tapestry.html",
+        "https://www.zimmerbiomet.com/en/products-and-solutions/specialties/sports-medicine/juggerknotless-all-suture-anchors.html",
+        "https://www.zimmerbiomet.com/en/products-and-solutions/specialties/trauma/alps-mvx-mini-fragment-system.html",
+        "https://www.zimmerbiomet.com/en/products-and-solutions/specialties/trauma/affixus-hip-fracture-nail.html"
+      ],
+      "description": "Individual product detail page with hero, product description, features, specifications, and related products",
+      "blocks": []
+    },
+    {
+      "name": "zbedge-landing-page",
+      "urls": [
+        "https://www.zimmerbiomet.com/en/products-and-solutions/zb-edge.html",
+        "https://www.zimmerbiomet.com/en/products-and-solutions/zb-edge/robotics.html",
+        "https://www.zimmerbiomet.com/en/products-and-solutions/zb-edge/mymobility.html"
+      ],
+      "description": "ZBEdge technology suite landing pages showcasing digital health, robotics, and connected care solutions",
+      "blocks": []
+    },
+    {
+      "name": "patients-caregivers-page",
+      "urls": [
+        "https://www.zimmerbiomet.com/en/patients-caregivers.html",
+        "https://www.zimmerbiomet.com/en/patients-caregivers/knee-replacement-implants-technologies.html",
+        "https://www.zimmerbiomet.com/en/patients-caregivers/hip-replacement-products-technologies.html",
+        "https://www.zimmerbiomet.com/en/patients-caregivers/knee-replacement-implants-technologies/Persona-IQ-smart-knee.html",
+        "https://www.zimmerbiomet.com/en/patients-caregivers/robotic-surgery.html",
+        "https://www.zimmerbiomet.com/en/patients-caregivers/mymobility-patient-care-app.html"
+      ],
+      "description": "Patient-facing pages with treatment information, product overviews, doctor finder, and caregiver resources",
+      "blocks": []
+    },
+    {
+      "name": "about-us-page",
+      "urls": [
+        "https://www.zimmerbiomet.com/en/about-us/company-overview.html",
+        "https://www.zimmerbiomet.com/en/about-us/leadership.html",
+        "https://www.zimmerbiomet.com/en/about-us/our-impact.html",
+        "https://www.zimmerbiomet.com/en/about-us/contact-us.html"
+      ],
+      "description": "Corporate pages covering company overview, executive leadership team, impact initiatives, and contact information",
+      "blocks": []
+    },
+    {
+      "name": "education-resources-page",
+      "urls": [
+        "https://www.zimmerbiomet.com/en/education-and-resources.html",
+        "https://www.zimmerbiomet.com/en/value-based-care.html"
+      ],
+      "description": "Education hub and value-based care pages with medical education resources, events, and training programs",
+      "blocks": []
+    },
+    {
+      "name": "asc-solutions-page",
+      "urls": [
+        "https://www.zimmerbiomet.com/en/products-and-solutions/asc-solutions.html"
+      ],
+      "description": "Ambulatory surgery center solutions page with ASC-specific products, workflows, and value propositions",
+      "blocks": []
     }
   ]
 }

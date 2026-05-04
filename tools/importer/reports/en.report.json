@@ -1,0 +1,18 @@
+{
+  "status": "success",
+  "url": "https://www.zimmerbiomet.com/en",
+  "path": "en",
+  "timestamp": "2026-05-03T20:41:54.212Z",
+  "title": "Zimmer Biomet: Innovations in Orthopedic Care",
+  "template": "homepage",
+  "blocks": [
+    "hero-video",
+    "hero-video",
+    "columns",
+    "carousel",
+    "cards-icon",
+    "columns-cta",
+    "cards-news",
+    "columns-banner"
+  ]
+}

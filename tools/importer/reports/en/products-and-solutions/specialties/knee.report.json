@@ -1,0 +1,12 @@
+{
+  "status": "success",
+  "url": "https://www.zimmerbiomet.com/en/products-and-solutions/specialties/knee.html",
+  "path": "en/products-and-solutions/specialties/knee",
+  "timestamp": "2026-05-03T19:56:49.498Z",
+  "title": "Knee Replacement Products | Zimmer Biomet",
+  "template": "specialty-landing-page",
+  "blocks": [
+    "hero-product",
+    "hero-product"
+  ]
+}

@@ -1,0 +1,12 @@
+{
+  "status": "success",
+  "url": "https://www.zimmerbiomet.com/en/products-and-solutions/specialties/trauma.html",
+  "path": "en/products-and-solutions/specialties/trauma",
+  "timestamp": "2026-05-03T19:57:15.446Z",
+  "title": "Trauma Products | Zimmer Biomet",
+  "template": "specialty-landing-page",
+  "blocks": [
+    "hero-product",
+    "hero-product"
+  ]
+}

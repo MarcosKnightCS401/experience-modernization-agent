@@ -1,0 +1,12 @@
+{
+  "status": "success",
+  "url": "https://www.zimmerbiomet.com/en/products-and-solutions/specialties/elbow.html",
+  "path": "en/products-and-solutions/specialties/elbow",
+  "timestamp": "2026-05-03T19:58:34.466Z",
+  "title": "Elbow Replacement Products | Zimmer Biomet",
+  "template": "specialty-landing-page",
+  "blocks": [
+    "hero-product",
+    "hero-product"
+  ]
+}

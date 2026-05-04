@@ -1,0 +1,12 @@
+{
+  "status": "success",
+  "url": "https://www.zimmerbiomet.com/en/products-and-solutions/specialties/sports-medicine.html",
+  "path": "en/products-and-solutions/specialties/sports-medicine",
+  "timestamp": "2026-05-03T19:57:08.139Z",
+  "title": "Sports Medicine Products from Zimmer Biomet",
+  "template": "specialty-landing-page",
+  "blocks": [
+    "hero-product",
+    "hero-product"
+  ]
+}

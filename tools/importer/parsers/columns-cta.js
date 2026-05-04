@@ -41,6 +41,10 @@ export default function parse(element, { document }) {
     row.push(frag);
   });
 
+  if (row.length === 1) {
+    row.push(document.createDocumentFragment());
+  }
+
   const cells = row.length > 0 ? [row] : [];
 
   const block = WebImporter.Blocks.createBlock(document, { name: 'columns-cta', cells });

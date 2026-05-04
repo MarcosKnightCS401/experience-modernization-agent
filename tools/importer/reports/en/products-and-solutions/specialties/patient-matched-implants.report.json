@@ -1,0 +1,12 @@
+{
+  "status": "success",
+  "url": "https://www.zimmerbiomet.com/en/products-and-solutions/specialties/patient-matched-implants.html",
+  "path": "en/products-and-solutions/specialties/patient-matched-implants",
+  "timestamp": "2026-05-03T19:58:42.259Z",
+  "title": "Patient-Matched Implants | Zimmer Biomet",
+  "template": "specialty-landing-page",
+  "blocks": [
+    "hero-product",
+    "hero-product"
+  ]
+}
